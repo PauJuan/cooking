@@ -1,0 +1,51 @@
+% Complete recipe example
+\begin{recipe}
+  [% indications (optional)
+    preparationtime = {\unit[1]{h}},
+    bakingtime={\unit[1]{h}},
+    bakingtemperature={\protect\bakingtemperature{
+        fanoven=\unit[230]{\textcelcius},
+        topbottomheat=\unit[195]{\textcelcius},
+        topheat=\unit[195]{\textcelcius},
+        gasstove=Level 2}},
+    portion = {\portion{5-6}},
+    calory={\unit[3]{kJ}},
+    source = {Somebody}
+]
+% title
+{Test Recipe}
+    
+    \graph
+    {%
+        small=pics/glass,     % small picture
+        big=pics/ingredients  % big picture
+    }
+    
+    \introduction{%
+        This is an amazing recipe
+    }
+    
+    \ingredients{%
+        2 bar & Dark Chocolate (above \unit[70]{\%})\\
+        3 & Eggs\\
+        \unit[200]{ml} & Cream\\
+        40 g & Sugar\\
+        50 g & Butter
+    }
+    
+    \preparation{%
+        \step Mix all the ingredients
+        \step Put them in the oven
+        \step Eat it
+    }
+    
+    \suggestion[Suggestion]
+    {%
+        Add more chocolate
+    }
+    
+    \hint{%
+        Eat in hot
+    }
+    
+\end{recipe}

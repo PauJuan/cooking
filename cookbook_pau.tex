@@ -1,0 +1,124 @@
+\documentclass[%
+a4paper,
+% twoside,
+11pt
+]{article}
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{lmodern}
+\usepackage{nicefrac}
+
+% Load cookbook package
+\usepackage[
+%    handwritten,  % font is not available
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+% Make command for degree symbol
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+
+% Fix index in PDFs
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+\renewcommand{\subsectionmark}[1]
+{% no implementation to display the section name instead
+}
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Pau Juan-Garcia},
+    pdftitle             = {Personal cooking book},
+    pdfsubject           = {Recipes},
+    pdfkeywords          = {cooking, recipes, cookbook},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+
+\hbadness=10000	% Ignore underfull boxes
+
+\begin{document}
+
+\title{Pau's recipes cookbook}
+\author{Pau Juan-Garcia\\ \href{mailto:Pambientoleg@gmail.com}{Pambientoleg@gmail.com}}
+\maketitle
+
+\begin{abstract}
+    \noindent This is a cookbook with a mixture of recipes that I have picked up through the years. They include vegan food and use ingredients from a range of nationalities.
+\end{abstract}
+
+\tableofcontents
+
+\vspace{5em}
+
+\section{Recipes}
+A selection of recipes to have a nice and balanced diet through the year.
+
+% background graphic
+\setBackgroundPicture
+[
+	x, 
+	y=-2cm,
+	width=\paperwidth-4cm,
+	height,
+	orientation = pagecenter
+]%
+{pics/background}
+
+% input recipes
+\include{recipes/Complete_Recipe}
+\include{recipes/ajo_arriero.tex}
+\include{recipes/alubias_guisadas.tex}
+%\include{recipes/arros_al_forn.tex}
+%\include{recipes/arroz_cubana.tex}
+%\include{recipes/ave_au_naranja.tex}
+%\include{recipes/avena_fruta_miel.tex}
+%\include{recipes/baguette_horno.tex}
+%\include{recipes/beans_tomato_soup.tex}
+%\include{recipes/bollit.tex}
+%\include{recipes/chicken_veggies.tex}
+%\include{recipes/coca_llanda.tex}
+%\include{recipes/coliflor_bechamel.tex}
+%\include{recipes/couscous.tex}
+%\include{recipes/curry.tex}
+%\include{recipes/empanada_atun.tex}
+%\include{recipes/ensalada_standard.tex}
+%\include{recipes/escalibada.tex}
+%\include{recipes/guiso_pescado.tex}
+%\include{recipes/lentils.tex}
+%\include{recipes/omellette.tex}
+%\include{recipes/paella.tex}
+%\include{recipes/pasta_mantecosa.tex}
+%\include{recipes/pasta_roquefort.tex}
+%\include{recipes/pasta_salad.tex}
+%\include{recipes/pasta_verduras.tex}
+%\include{recipes/patatas_limon_eneldo.tex}
+%\include{recipes/pechuga_con_nata.tex}
+%\include{recipes/pizza_casera.tex}
+%\include{recipes/potaje_cigrons.tex}
+%\include{recipes/potato_salad.tex}
+%\include{recipes/pure_verduras.tex}
+%\include{recipes/repollo_al_horno.tex}
+%\include{recipes/rice_salad.tex}
+%\include{recipes/rissoto_champis.tex}
+%\include{recipes/shepperds_pie.tex}
+%\include{recipes/stir_and_fry.tex}
+%\include{recipes/tortitas_aquafaba.tex}
+%\include{recipes/u-don.tex}
+%\include{recipes/verdures_al_forn.tex}
+
+\end{document} 
